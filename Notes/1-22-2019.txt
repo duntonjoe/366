@@ -1,0 +1,105 @@
+1-22-2019
+----------
+
+					WEB APP ARCHITECTURES:
+
+-Maintain independace between all database levels. (see ppt for actual diagram)
+	-User
+	-View
+	-Conceptual Schema
+	-InternalSchema
+	-Disk
+
+					Tiers:
+-N-tier architectures have the same components as above
+
+					Tier Architecture:
+-All 3 layers are on the same machine
+	-all code & processing kept on a single machine
+
+-Presntation, Logic, Data layers are tightly connected.
+
+					2-Tier Architecture:
+-Database runs on a server
+-Presentation & Logic layers still tightly connected.
+
+					3-Tier Articture:
+-each layer is on a different machine
+-Presentation, Logic, and Data disconnected.
+
+					Typical 3-Tier Architecture:
+1.Presentation Tier
+	G.U.I and shit
+2.Logic Tier
+	Content Processing
+3.Data Tier 
+	Data Management.
+
+
+Order is 
+
+Data <-> Logic <-> Presentation
+
+don't skip steps, don't loop back, it's a pipeline.
+
+					Design Problems & Solutions:
+
+MVC - Model View Controller (Not An Architecture, It's an interface design pattern).
+	^Triangular Topology. Model, View, And Controller may all talk freely at any time, unlike 3-tier pipeline.
+
+MVC - Usually used in a single layer system. 3-Tier pipeline for multiple layer systems.
+
+
+					Database Management System (DBM):
+DBMS contains information about a perticular enterprise
+
+					Purpose Of Database SYstems:
+-Solve data redundancy @ inconsistency
+-Makes accessing data easier
+-Allows for data isolation
+-Removes update atomiciy (no partial updates, data is either changed fully or rolled back).
+-Allow concurent/multiple users
+-Resolves varius security flaws
+
+					Instances & Schemas:
+-Schema -> Logical structure of the database
+	analgous to type info of a variable in programming.
+
+-Instance ->Actual Content of the DB at a particular point in time.
+
+					Data Models:
+-A collection of tools for describing
+	-Data
+	-Data Relationships
+	-Data Semantics
+	-Data constraints
+
+					SQL:
+-SQL allows for both data definition AND data manipulation
+
+					Database Design:
+-Logical Design- deciding on the databse schema.
+-Physical Design - Deciding on the physical layout of the database
+
+					Entity-Relationship Model:
+-Models an eneterprise as a collection of entities and relationships
+-represented by an Entity-Relationship Diagaram.
+
+					Query Processing:
+1) Parsing & translation
+2) Optimization
+3) Evaluation
+
+-Alternate ways of evaluation a given query
+-Cost difference with optimizing can be enormous
+
+					Database Architecture:
+-Centralized
+-Client-Server
+-Parallel
+-Distributed
+
+					Database Administrator:
+-Administers the fucking database! :D
+
+					<END_CHAPTER_1>
