@@ -1,0 +1,39 @@
+1-28-19
+-------
+
+-primary keys must be unique to each entity.
+
+use "in" keyword when searching for x or y or z
+
+	....WHERE shrcode IN ('x', 'y', 'z');
+
+^other tips in slides.
+
+ORDER BY <- sort rows of table in some way.
+
+
+Calculate total divedents earned by each stock, report this as payment sort highest-lowest payment:
+
+	select shrfirm, shrqty*shrdiv as payment, from share order by payment desc;
+
+Built-in aggregating functions -> SEE SLIDES
+
+count(*) <- counts rows in the table.
+
+Subqueries:
+
+-All firms with a PE grater than average
+
+	select shrfirm,shrpe form share where shrpe > (select AVG(shrpe) from share);
+
+^simply adding the average column to select would not examine relationshipe between share PE and average.
+
+***USE REGEX INSTEAD OF LIKE KEYWORD***
+
+DISTINCT <- eliminaes duplicate rows.
+
+	SELECT DISTINCT shrpe FROM share;
+
+wrap distinct in a count to save # of unique rows.
+
+verify #7 on lab.

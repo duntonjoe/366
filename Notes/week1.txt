@@ -103,3 +103,40 @@ DBMS contains information about a perticular enterprise
 -Administers the fucking database! :D
 
 					<END_CHAPTER_1>
+1-25-19
+-------
+
+Types of information systems <-- See Slides
+
+Desirable attributes of a data management system:
+	-Shareable
+	-Transportable
+	-Secure
+	-Accurate
+	-Timely
+	-Relevant
+
+Problems with Data MGMT systems:
+	-Redundancy
+	-Lack of data control
+	-Poor interface
+	-Delays
+	-Lack of reality
+	-Lack of data integration.
+
+Attributes - charecteristics of data to be tracked
+
+Identifiers - every instance of an entity must be uniquely identified.
+
+Rules for table creation <-- SLIDES
+
+Defining a table <-- SLIDES
+
+Char -> Fixed length
+VARCHAR -> length up to indicated limit, reports back length.
+
+Decimal -> look up, jesus christ.
+
+SQL standard types <-- SLIDES
+
+SELECT * FROM <table> <-- show me ur goodies
