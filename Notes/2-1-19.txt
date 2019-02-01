@@ -1,0 +1,18 @@
+2-1-19
+-------
+
+					One-to-Many-Relationship.
+Entities are related to other entities.
+
+^Example in lecture slides.
+
+Runners, time/length:
+
+	-runner id as Primary key in runner table, also include runner name.
+	-Second table has runID, length, time. runID is primary key. runnerID is a foreign key.
+	-1 runner has multiple lengths and times.
+
+having is like "where", but for groups.
+
+
+
