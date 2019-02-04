@@ -1,0 +1,47 @@
+2-4-19
+--------
+
+One to many relationship
+
+Regex and stuff <--See Slides
+
+Subqueries - a query nested within another
+
+
+
+
+	Stock			     Nation
+	*stkcode\		     *natcode
+	STKFIRM	---------------------NATNAME
+	NATCODE	/		     EXCHRATE
+
+
+
+select stkfirm FROM stock where natcode in (select natcode from nation where natname = 'Australia');
+
+	^report names of all australian stocks.
+
+
+don't hardcode country code, could change.
+
+Correlated subqueries: solvesthe inner query many times. (outer/inner loop type thing)
+	^Can be resource intensive.
+
+
+Report the country firm & stk holding for the max quantity of stk held for each country:
+
+SELECT natname, stkfirm, 
+	(stkqty * stkprice) as holding 
+	from stock, nation WHERE nation.natcode = stock.natcode
+	AND stkqty = 
+	(SELECT MAX(stkqty) FROM stock 
+	WHERE stock.natcode = nation.natcode);
+
+Views - virtual tables
+	Imaginary table constructed by the DBMS when required.
+	Only definition of the ciew is stored,not the result.
+	^-Example in SLIDES
+
+Views are used just like tables.
+
+
