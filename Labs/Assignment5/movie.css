@@ -1,0 +1,26 @@
+body {
+  background-image: url("http://cs.millersville.edu/~sschwartz/366/HTML_CSS_Lab/Images/background.png");
+  margin: 0px 0px 0px 0px;
+}
+
+p {
+	font-size: 8pt;
+	font-family: "Verdana", Verdana, sans-serif;
+}
+
+h1 {
+	font-size: 24pt;
+	font-family: "Tahoma", Tahoma, sans-serif;
+	text-align: center;
+	text-shadow: 3px 3px #999999;
+}
+
+.banner {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	height: 50px;
+	background-image: url("http://cs.millersville.edu/~sschwartz/366/HTML_CSS_Lab/Images/bannerbg.png");
+	background-repeat: repeat;
+	background-size: cover;
+}
