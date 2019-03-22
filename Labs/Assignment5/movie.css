@@ -15,6 +15,22 @@ h1 {
 	text-shadow: 3px 3px #999999;
 }
 
+.column_left{
+	margin-top: 10px;
+	width: 47%;
+	float: left;
+	margin-left: 2%;
+	overflow: hidden;
+}
+
+.column_right{
+	margin-top: 10px;
+	width: 47%;
+	float: right;
+	margin-right: 2%;
+	overflow: hidden;
+}
+
 .banner {
 	display: block;
 	margin-left: auto;
@@ -29,14 +45,20 @@ h1 {
 	width: 800px;
 	margin-left: auto;
 	margin-right: auto;
-	text-align: center;
+	position: block;
 	border-width: 4px;
 	border-style: solid;
 	border-color: gray;
 	border-radius: 20px;
+	overflow: hidden;
 }
 #left-top{
 	float: left;
+	height:83px;
+	width: 100%;
+  	font-size: 48pt;
+  	font-weight: bold;
+  	color: red;
 	background-image: url("http://cs.millersville.edu/~sschwartz/366/HTML_CSS_Lab/Images/rbg.png");
 	background-repeat: repeat;
 	background-size: cover;
@@ -50,4 +72,32 @@ h1 {
 .right{
 	width: 250px;
 	float: right;
+}
+
+.review{
+	font-family: "Tahoma", Tahoma, sans-serif;
+	background-color: #E8DC9B;
+	border-width: 2px;
+	border-style: solid;
+	border-color: gray;
+	border-radius: 10px;
+	padding: 5px;
+	overflow: hidden;
+}
+
+.reviewer_image{
+	float: left;
+	padding: 5px;
+}
+
+.reviewer{
+	font-family: "Tahoma", Tahoma, sans-serif;
+	font-style: italic;
+	margin-bottom: 20px;
+}
+
+.validator{
+	bottom: 0px;
+	right: 0px;
+	position: fixed;
 }
