@@ -26,5 +26,28 @@ h1 {
 }
 
 .content{
+	width: 800px;
+	margin-left: auto;
+	margin-right: auto;
 	text-align: center;
+	border-width: 4px;
+	border-style: solid;
+	border-color: gray;
+	border-radius: 20px;
+}
+#left-top{
+	float: left;
+	background-image: url("http://cs.millersville.edu/~sschwartz/366/HTML_CSS_Lab/Images/rbg.png");
+	background-repeat: repeat;
+	background-size: cover;
+}
+
+.left{
+	width: 550px;
+	float: left;
+}
+
+.right{
+	width: 250px;
+	float: right;
 }
