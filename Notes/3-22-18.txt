@@ -1,0 +1,44 @@
+3-22-18
+--------
+
+PHP
+
+some url's specify programs the server should run:
+https://webster.cs.washington.edu/cse190m/quote.php
+
+PHP code can be embedded in XHTML code
+
+example php block:
+
+<?php
+print"hello!"
+?>
+
+
+variables begin wint $ in php
+
+expession block, prints contents:
+
+<= "Hello"; ?>
+
+
+string concatenation operator is "." not "+'
+
+this works >> print "you are $age years old.";
+
+append to an array with
+
+$name[] = "Thing_To_Append";
+
+arrays push/pop rear
+
+shifting deals with front
+
+array slices return a subset of array based on passed in indexes
+
+explode/implode convert between strings and arrays.
+^can also do this with regex
+
+$_REQUEST << builtin global array that holds http request params. defaults to string type.
+
+

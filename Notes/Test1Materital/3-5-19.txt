@@ -1,0 +1,30 @@
+3-5-19
+--------
+
+
+Fucking HTML.
+
+HTML - Hyper Text Markup Language
+
+horizontal rule - <hr/>
+
+Block elements contain an entire region of contoent
+
+inline elements affect a small amount of content
+
+breaks - <br/>
+
+phrase elements - inline elements used to emphasize text
+
+don't make tag nesting look retarded
+
+Unordered list - <ul>
+			<li>
+			</li>
+		</ul>
+
+Definition lists
+
+Blockquotes
+
+

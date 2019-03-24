@@ -1,0 +1,36 @@
+Test 1 Review
+--------------
+
+100pts total
+	29 - Normalization/Data Modeling
+
+	71 - SQL
+		24 - Give Results Of A Query
+		32 - Write a SQL Query
+		15 - Joins (Left/Outer/Inner, etc) or interpret results, or identify join
+
+
+Normal Forms:
+
+1st Norm Form
+	-All Rows have same number of columns & all columns are single-valued
+
+2nd Norm Form
+	-Violated if a column is dependent on only part of the primary key.
+		(ex. a column in table is determined by part of a composite primary key)
+		ex. customer credit has primary key (orderid * custid) but only depends on customer id
+
+3rd Norm Form
+	-All columns must be dependant on key, not some other column in the table
+	Violated by some non-key column depending on another non key col.
+
+4th Norm Form
+	-Having 2 multi-valued independant columns in the same table.
+
+^Look up normal form examples
+
+look at insert/create table syntax
+
+be familiar with creating views
+
+

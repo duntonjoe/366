@@ -1,0 +1,57 @@
+2-18-19
+--------
+
+Types of joins:
+
+	inner join (A,B) - intersection of A and B.
+
+	Natural Join (A, B) - join ANY matching columns between A and B
+
+	Left Outer Join (A, B) - Everything in A + (A^B)
+
+	Right Outer Join(A, B) - Everything in B + (A^B)
+	
+	Full Outer Join (A, B) - A + B + (A^B)
+	
+	Left Join Excluding Inner (A, B) - A - (A^B)
+
+	Right join exlude inner (A, B)  - A - (A^B)
+
+	Full outer Excluding inner (A + B) - (A^B)
+
+Data Modeling:
+
+	Capture relationship between data points in database.
+
+	Building Blocks:
+
+		Entity
+
+		Attribute
+
+		Relationship
+
+		Identifier
+
+	Goals:
+
+		Well Formed
+
+		High Fidelity Image:
+			Faithfully descibe the world it is supposed to respresent.
+			Model must make sense to user.
+			Captures all Rule & exceptions.
+
+	Quality Improvement:
+		Is the level of detail correct?
+		All exceptions handled?
+		Is the model accurate?
+
+
+	Cardinality Vs. Modality:
+
+		Cardinality - "To one or to many"
+		Modality - "this relation ship be from 0 to x? from 1 to x? is each end required or optional?"
+
+		
+

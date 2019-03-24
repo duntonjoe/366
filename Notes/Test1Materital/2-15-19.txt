@@ -1,0 +1,74 @@
+2-15-19
+--------
+
+MIDTERM - Tuesday 26th
+
+Divide slides - questions six & 7 in lab
+
+Olympic Data model:
+
+
+Events table:
+*eventID
+event title
+teams
+
+
+Athlete table:
+*athID
+country
+teams
+realtionship status.
+
+Country table:
+*ctryID
+flag bearer
+
+
+Team:
+*teamid
+members
+country
+event id
+captian
+
+
+team member:
+
+
+country -> athelete (flag bearer)
+country-> team (many)
+event -> team(many)
+team -> athlete (many)
+team -> athlete (captain)
+athlete -> team member
+team -> team member
+
+athlete -> athlete (spouse, recursive).
+
+
+Querying a 1:1 relationsip
+
+	select empfname, deptname, empsalary FROM emp
+		where empno IN (select empno from dept);
+
+Querying a 1:1 recursive relationship
+	select premonname, premonnum from monarch
+		where monname = 'Elizabeth' and monnum ='II';
+
+
+
+
+olympic table:
+*OlympID
+City
+Country
+Year
+predID
+succID
+
+City:
+*CityID
+city stuff.
+
+

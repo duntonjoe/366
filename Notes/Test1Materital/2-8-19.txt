@@ -1,0 +1,63 @@
+2-8-19
+--------
+
+Lab advice:
+
+	select stkfirm, natname
+		from stock, nation.
+	^this yields all stocks paired with all nations.
+
+	add "where stock.natcode = nation.natcode" to pair data properly
+
+Many-To-Many Relationship:
+
+Two 1-to-Many relationships across 2 tabels:
+
+
+item:		         Sales:
+*Itemno\		/*Saleno
+color	---------------- Date
+price  /		\
+  |			   |
+  |			   |
+  |	 / LineNo: \	   |
+  |------  *Saleno --------|
+	 \ *Itemno /
+	    Qty
+	    Lineno
+
+
+Table "LineNo" captures the association of both tables.
+
+Primary Key of both tabels are incorporated in LineNo. Identifying relationship.
+
+	PRIMARY KEY (lineno, saleno) <--primary key is the combination of these two things
+
+	
+
+Create data model, track which contries won which medals in various summer olypics for men's AND women's events.
+
+
+ Country:		Olympics:
+/ *ccode \	      / *ocode   \
+| Name	 -------------  location |
+\ ...	 /	      \ Year     /
+|			   |
+|			   |
+|			   |
+|	  Medal:	   |
+|       / Gender     \	   |
+|-------  ccode	      -----|
+	\ ocode	     /
+	  *MedalCode
+
+exists: show items what satisfy a given condition
+
+not-exists: opposite of exists
+
+forall <- universal qualifier
+	2 not exists make a "for all"
+	^This is a divide.
+
+	
+

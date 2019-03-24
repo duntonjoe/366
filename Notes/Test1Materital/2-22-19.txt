@@ -1,0 +1,54 @@
+2-2-19
+------
+
+Modality - item required vs optional
+
+Assocative relationships depend on 2 different entities
+
+UML Aggregation - usually captured by a 1:m relationship
+
+Habits of effective data modelers:
+	immerse
+	challenge
+	generalize
+	test
+	limit
+	integrate
+	complete
+
+Nomralization & other dat modeling methods
+
+Nomalization  - application of a series of rules to gradually improve design
+
+Multidetermination - Agiven value determines multiple values
+
+	attribute realtionships:
+
+	1:1 - A determines B, B determines A.
+
+	1:m - one attribute values determnes another nut not vice versa
+	
+	m:m - neither attribute determines the other.
+
+Normal forms:
+
+	First Normal form (1NF)
+		All rows have same # of columns, single valued attributes only
+
+	2nd Normal Form (2NF)
+		violated when a nonkey column isa fact about part of the primary key.
+		Column is not fully funtionally dependent on the primary key
+
+	3rd Normal Form (3NF)
+		Violated when a nonkey column is a fact about another nonkey column
+		A column is not fully funtionally dependent onthe primary key
+
+	4th Normal Form (4NF)
+		A row should not contain 2 or more multivalued independant facts
+		
+
+	5th Normal Form (5NF)
+		A table can be recostructed from other tables
+		There exists some rule that enables a realtion to be inferred
+
+	
