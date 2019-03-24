@@ -1,18 +1,46 @@
 body {
   background-image: url("http://cs.millersville.edu/~sschwartz/366/HTML_CSS_Lab/Images/background.png");
-  margin: 0px 0px 0px 0px;
+  margin: 0px;
+  font-family: Verdana,Tahoma,sans-serif;
+  font-size: 8pt;
 }
 
 p {
 	font-size: 8pt;
-	font-family: "Verdana", Verdana, sans-serif;
+	font-family: Verdana, Tahoma, sans-serif;
+	margin-top: 0;
+	margin-bottom: 0;
+	width: 100%;
 }
 
 h1 {
 	font-size: 24pt;
-	font-family: "Tahoma", Tahoma, sans-serif;
+	font-family: Tahoma, Verdana, sans-serif;
 	text-align: center;
 	text-shadow: 3px 3px #999999;
+}
+
+dt {
+	font-weight: bold;
+	margin-top: 10pt;
+	margin-left: 13.33px;
+}
+
+dl{
+	margin-left: 0px;
+	margin-right: 10px
+}
+
+dd{
+	margin-left: 40px;
+}
+
+ul {
+	padding-left: 0px;
+}
+
+li {
+	list-style-type: none;
 }
 
 .column_left{
@@ -26,19 +54,17 @@ h1 {
 .column_right{
 	margin-top: 10px;
 	width: 47%;
-	float: right;
-	margin-right: 2%;
+	margin-left: 2%;
+	float: left;
 	overflow: hidden;
 }
 
 .banner {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
+	display: flex;
+	justify-content: center;
 	height: 50px;
 	background-image: url("http://cs.millersville.edu/~sschwartz/366/HTML_CSS_Lab/Images/bannerbg.png");
 	background-repeat: repeat;
-	background-size: cover;
 }
 
 .content{
@@ -61,7 +87,6 @@ h1 {
   	color: red;
 	background-image: url("http://cs.millersville.edu/~sschwartz/366/HTML_CSS_Lab/Images/rbg.png");
 	background-repeat: repeat;
-	background-size: cover;
 }
 
 .left{
@@ -72,32 +97,60 @@ h1 {
 .right{
 	width: 250px;
 	float: right;
+	font-size: 8pt;
+	font-family: Arial, sans-serif;
+	overflow: hidden;
+	background: #A2B964;
 }
 
-.review{
-	font-family: "Tahoma", Tahoma, sans-serif;
+.quote{
+	font-family: Tahoma, Verdana, sans-serif;
 	background-color: #E8DC9B;
+	font-weight: bold;
 	border-width: 2px;
 	border-style: solid;
 	border-color: gray;
 	border-radius: 10px;
-	padding: 5px;
+	padding: 8px;
 	overflow: hidden;
 }
 
+.itStinks{
+	overflow: hidden;
+}
+
+
 .reviewer_image{
 	float: left;
-	padding: 5px;
+	padding-right: 5px;
+}
+
+.review{
+	margin-top: 26.66px;
+	padding-
+	overflow: hidden;
 }
 
 .reviewer{
-	font-family: "Tahoma", Tahoma, sans-serif;
+	font-family: Tahoma, Verdana, sans-serif;
 	font-style: italic;
-	margin-bottom: 20px;
 }
 
-.validator{
-	bottom: 0px;
+#valid{
+	bottom: 5px;
 	right: 0px;
 	position: fixed;
+}
+.validator{
+	opacity: 0.5;
+	margin-top: 5px;
+}
+
+#bottom{
+  width: 100%;
+  float: right;
+  text-align: center;
+  background-color: #A2B964;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
