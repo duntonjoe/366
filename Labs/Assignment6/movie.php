@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<?php
-	$movie = $_GET["film"];
+		$movie = $_GET["film"];
 	?>
 	<head>
 		<title>Rancid Tomatoes</title>
@@ -16,7 +16,10 @@
 			<img src="http://cs.millersville.edu/~sschwartz/366/HTML_CSS_Lab/Images/banner.png" alt="Rancid Tomatoes"/>
 		</div>
 
-		<h1>TMNT (2007)</h1>
+		<?php
+			$info = file($movie/info.txt);
+		?>
+		<h1> <?= $info[0] . " (" . $info[1] . ")" ?>  </h1>
 
 		<div class="content">
 		
