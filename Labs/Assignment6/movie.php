@@ -17,7 +17,7 @@
 		</div>
 
 		<?php
-			$info = file($movie/info.txt);
+			$info = file($movie . "/info.txt");
 		?>
 		<h1> <?= $info[0] . " (" . $info[1] . ")" ?>  </h1>
 
