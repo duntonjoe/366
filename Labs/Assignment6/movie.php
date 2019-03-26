@@ -24,7 +24,7 @@
 		<div class="content">
 		
 			<div class="right">
-				<img src="http://cs.millersville.edu/~sschwartz/366/HTML_CSS_Lab/Images/overview.png" alt="general overview" />
+				<img src= <?= $movie . "/overview.png"?> alt="general overview" />
 			
 
 			<dl>
