@@ -59,7 +59,7 @@
 				<div class="column_left">
 					
 					<?php 
-							$reviewFile = glob(review*.txt);
+							$reviewFile = glob("review*.txt");
 							$count = count($reviewFile);
 							$half = floor($count / 2);
 							$review = file($reviewFile);
@@ -90,7 +90,7 @@
 					</div>
 				<div class="column_right">
 					<?php 
-							$reviewFile = glob(review*.txt);
+							$reviewFile = glob("review*.txt");
 							$count = count($reviewFile);
 							$half = floor($count / 2);
 							$review = file($reviewFile);
