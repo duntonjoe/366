@@ -29,7 +29,7 @@
 
 			<dl>
 				<?php 
-					$movie = $_GET["film"]
+					$movie = $_GET["film"];
 					$overview = file($movie . "/overview.txt");
 					foreach($overview as $section){
 					$section = explode(":", $section);
@@ -62,7 +62,7 @@
 				<div class="column_left">
 					
 					<?php 
-							$movie = $_GET["film"]
+							$movie = $_GET["film"];
 							$reviewFile = glob("review*.txt");
 							$count = count($reviewFile);
 							$half = floor($count / 2);
@@ -93,7 +93,7 @@
 					</div>
 				<div class="column_right">
 					<?php 
-							$movie = $_GET["film"]
+							$movie = $_GET["film"];
 							$reviewFile = glob("review*.txt");
 							$count = count($reviewFile);
 							$half = floor($count / 2);
