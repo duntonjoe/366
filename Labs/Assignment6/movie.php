@@ -93,7 +93,7 @@
 				<div class="column_right">
 					<?php 
 							$movie = $_GET["film"];
-							$reviewFile = glob($movie"/review*.txt");
+							$reviewFile = glob($movie."/review*.txt");
 							$count = count($reviewFile);
 							$half = floor($count / 2);
 							for($i = $half + 1; $i <= $count; $i++){
