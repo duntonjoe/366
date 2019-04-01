@@ -63,7 +63,7 @@
 					
 					<?php 
 							$movie = $_GET["film"];
-							$reviewFile = glob($move."/review*.txt");
+							$reviewFile = glob($movie."/review*.txt");
 							$count = count($reviewFile);
 							$half = floor($count / 2);
 							for($i = 0; $i < $half; $i++){
