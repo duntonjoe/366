@@ -88,10 +88,8 @@
 									<?= $review[2]."<br />".$review[3] ?>
 								</p>
 							</div>
-
 						<?php } ?>
 					</div>
-				</div>
 				<div class="column_right">
 					<?php 
 							$reviewFile = glob("review*.txt");
