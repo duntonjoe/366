@@ -17,6 +17,7 @@
 		</div>
 
 		<?php
+			$movie = $_GET["film"];
 			$info = file($movie . "/info.txt");
 		?>
 		<h1> <?= $info[0] . " (" . $info[1] . ")" ?>  </h1>
@@ -27,7 +28,9 @@
 				<img src= <?= $movie . "/overview.png"?> alt="general overview" />
 
 			<dl>
-				<?php $overview = file($movie . "/overview.txt");
+				<?php 
+					$movie = $_GET["film"]
+					$overview = file($movie . "/overview.txt");
 					foreach($overview as $section){
 					$section = explode(":", $section);
 					print "<dt>".$section[0]."</dt><dd>".$section[1]."</dd>";
@@ -59,6 +62,7 @@
 				<div class="column_left">
 					
 					<?php 
+							$movie = $_GET["film"]
 							$reviewFile = glob("review*.txt");
 							$count = count($reviewFile);
 							$half = floor($count / 2);
@@ -89,6 +93,7 @@
 					</div>
 				<div class="column_right">
 					<?php 
+							$movie = $_GET["film"]
 							$reviewFile = glob("review*.txt");
 							$count = count($reviewFile);
 							$half = floor($count / 2);
