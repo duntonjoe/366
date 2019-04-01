@@ -93,7 +93,7 @@
 							$count = count($reviewFile);
 							$half = floor($count / 2);
 							for($i = $half + 1; $i <= $count; $i++){
-								$review = file($movie."/".$reviewFile[i]);
+								$review = file($movie."/".$reviewFile[$i]);
 								if($review[1] == "ROTTEN"){
 									$reviewParity = "rotten";
 								}
