@@ -57,16 +57,22 @@
 				</div>
 				
 				<div class="column_left">
-					<div class="review">
-						<?php foreach(glob((review*.txt) as $reviewFile)){
-								$review = file($reviewFile);
+					
+					<?php 
+							$reviewFile = glob(review*.txt);
+							$count = count($reviewFile);
+							$half = floor($count / 2);
+							$review = file($reviewFile);
+							for(int i = 1; i <= $ half; ++i)
+							{
 								if($review[1] == "ROTTEN"){
 									$reviewParity = "rotten";
 								}
 								else if($review[1] == "FRESH"){
 									$reviewParity = "fresh";
 								}
-						?>
+					?>
+						<div class="review">
 							<div class="quote">
 								<p>
 									<img src= <?= "http://cs.millersville.edu/~sschwartz/366/HTML_CSS_Lab/Images/".$reviewParity.".gif" ?> alt="Rotten" class="reviewer_image"/>
@@ -79,9 +85,39 @@
 									<?= $review[2]."<br />".$review[3] ?>
 								</p>
 							</div>
+
 						<?php } ?>
 					</div>
 				<div class="column_right">
+					<?php 
+							$reviewFile = glob(review*.txt);
+							$count = count($reviewFile);
+							$half = floor($count / 2);
+							$review = file($reviewFile);
+							for(int i = 1; i <= $ half; ++i)
+							{
+								if($review[1] == "ROTTEN"){
+									$reviewParity = "rotten";
+								}
+								else if($review[1] == "FRESH"){
+									$reviewParity = "fresh";
+								}
+					?>
+						<div class="review">
+							<div class="quote">
+								<p>
+									<img src= <?= "http://cs.millersville.edu/~sschwartz/366/HTML_CSS_Lab/Images/".$reviewParity.".gif" ?> alt="Rotten" class="reviewer_image"/>
+									<q> <?= $review[0] ?> </q>
+								</p>
+						 	</div>	
+						 	<div class="reviewer">
+								<p>
+									<img src="http://cs.millersville.edu/~sschwartz/366/HTML_CSS_Lab/Images/critic.gif" alt="Critic" class="reviewer_image"/>
+									<?= $review[2]."<br />".$review[3] ?>
+								</p>
+							</div>
+
+						<?php } ?>
 				</div>
 			</div>
 			<p id="bottom">(1-10) of 88</p>
