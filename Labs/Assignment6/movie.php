@@ -63,13 +63,10 @@
 					
 					<?php 
 							$movie = $_GET["film"];
-							echo $movie;
-							$reviewFile = glob("review*.txt");
+							$reviewFile = glob($move."/review*.txt");
 							$count = count($reviewFile);
 							$half = floor($count / 2);
-							echo $half;
 							for($i = 0; $i < $half; $i++){
-								echo $i;
 								$review = file($movie."/".$reviewFile[$i]);
 								if($review[1] == "ROTTEN"){
 									$reviewParity = "rotten";
@@ -96,8 +93,7 @@
 				<div class="column_right">
 					<?php 
 							$movie = $_GET["film"];
-							echo $movie;
-							$reviewFile = glob("review*.txt");
+							$reviewFile = glob($movie"/review*.txt");
 							$count = count($reviewFile);
 							$half = floor($count / 2);
 							for($i = $half + 1; $i <= $count; $i++){
@@ -112,7 +108,6 @@
 						<div class="review">
 							<div class="quote">
 								<p>
-									<? echo "hello"?>
 									<img src= <?= "http://cs.millersville.edu/~sschwartz/366/HTML_CSS_Lab/Images/".$reviewParity.".gif" ?> alt="Rotten" class="reviewer_image"/>
 									<q> <?= $review[0] ?> </q>
 								</p>
