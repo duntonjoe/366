@@ -67,7 +67,6 @@
 							$count = count($reviewFile);
 							$half = floor($count / 2);
 							for($i = 0; $i < $half; $i++){
-								if($count>=10)
 								$review = file($reviewFile[$i]);
 								if($review[1] == "ROTTEN"){
 									$reviewParity = "rotten";
