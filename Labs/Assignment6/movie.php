@@ -27,10 +27,11 @@
 				<img src= <?= $movie . "/overview.png"?> alt="general overview" />
 
 			<dl>
-				<? $overview = file($movie . "/overview.txt")
-				foreach($overview as $section){
+				<?php $overview = file($movie . "/overview.txt");
+					foreach($overview as $section){
 					$section = explode(":", $section);
-					print "<dt>". $section[0] . "</dt><dd>" . $section[1] . "</dd" 
+					print "<dt>".$section[0]."</dt><dd>".$section[1]."</dd>";
+					} 
 				?>
 				<dd>
 					<ul>
