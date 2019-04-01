@@ -25,40 +25,13 @@
 		
 			<div class="right">
 				<img src= <?= $movie . "/overview.png"?> alt="general overview" />
-			
 
 			<dl>
-				<dt>STARRING</dt>
-				<dd>Patrick Stewart <br /> Mako <br /> Sarah Michelle Gellar <br /> Kevin Smith</dd>
-
-				<dt>DIRECTOR</dt>
-				<dd>Kevin Munroe</dd>
-
-				<dt>RATING</dt>
-				<dd>PG</dd>
-
-				<dt>THEATRICAL RELEASE</dt>
-				<dd>Mar 23, 2007</dd>
-
-				<dt>MOVIE SYNOPSIS</dt>
-				<dd>After the defeat of their old arch nemesis, The Shredder, the Turtles have grown apart as a family.</dd>
-
-				<dt>MPAA RATING</dt>
-				<dd>PG, for animated action violence, some scary cartoon images and mild language</dd>
-
-				<dt>RELEASE COMPANY</dt>
-				<dd>Warner Bros.</dd>
-
-				<dt>RUNTIME</dt>
-				<dd>90 mins</dd>
-
-				<dt>GENRE</dt>
-				<dd>Action/Adventure, Comedies, Childrens, Martial Arts, Superheroes, Ninjas, Animated Characters</dd>
-
-				<dt>BOX OFFICE</dt>
-				<dd>$54,132,596</dd>
-
-				<dt>LINKS</dt>
+				<? $overview = file($movie . "/overview.txt")
+				foreach($overview as $section){
+					$section = explode(":", $section);
+					print "<dt>". $section[0] . "</dt><dd>" . $section[1] . "</dd" 
+				?>
 				<dd>
 					<ul>
 						<li><a href="http://www.ninjaturtles.com/">The Official TMNT Site</a></li>
