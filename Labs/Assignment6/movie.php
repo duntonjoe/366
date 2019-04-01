@@ -107,6 +107,7 @@
 						<div class="review">
 							<div class="quote">
 								<p>
+									<? echo "hello"?>
 									<img src= <?= "http://cs.millersville.edu/~sschwartz/366/HTML_CSS_Lab/Images/".$reviewParity.".gif" ?> alt="Rotten" class="reviewer_image"/>
 									<q> <?= $review[0] ?> </q>
 								</p>
