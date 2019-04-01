@@ -45,7 +45,14 @@
 			</div>
 			<div class="left">
 				<div id="left-top">
-					<img src="http://cs.millersville.edu/~sschwartz/366/HTML_CSS_Lab/Images/rottenbig.png" alt="Rotten" />
+					<?php if($info[2] >= 60){
+							$reviewPic = "fresh";
+					}
+					else{
+						$reviewPic = "rotten";
+					}
+					?>
+					<img src= <?="http://cs.millersville.edu/~sschwartz/366/HTML_CSS_Lab/Images/".$reviewPic."big.png"?> alt="Rotten" />
 					<?= $info[2] . "%" ?>
 				</div>
 				
