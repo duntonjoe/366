@@ -62,8 +62,8 @@
 							$reviewFile = glob("review*.txt");
 							$count = count($reviewFile);
 							$half = floor($count / 2);
-							$review = file($reviewFile);
-							for($i = 1; $i <= $half; $i++){
+							for($i = 0; $i < $half; $i++){
+								$review = file($reviewFile[$i]);
 								if($review[1] == "ROTTEN"){
 									$reviewParity = "rotten";
 								}
@@ -92,9 +92,8 @@
 							$reviewFile = glob("review*.txt");
 							$count = count($reviewFile);
 							$half = floor($count / 2);
-							$review = file($reviewFile);
-							for($i = $half; $i <= $count; $i++)
-							{
+							for($i = $half + 1; $i <= $count; $i++){
+								$review = file($reviewFile[i]);
 								if($review[1] == "ROTTEN"){
 									$reviewParity = "rotten";
 								}
