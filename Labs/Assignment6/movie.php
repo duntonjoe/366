@@ -127,7 +127,7 @@
 						<?php } ?>
 				</div>
 			</div>
-			<p id="bottom">(1-<?=$count?> of <?=$count?></p>
+			<p id="bottom">(1-<?=$count?>) of <?=$count?></p>
 		</div>
 		<div id="valid">
 			<a href="http://validator.w3.org/check/referer"><img src="http://cs.millersville.edu/~sschwartz/366/Images/w3c-html.png" alt="Valid HTML5" class="validator"/></a> <br />
