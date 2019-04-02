@@ -78,7 +78,15 @@
 						<div class="review">
 							<div class="quote">
 								<p>
-									<img src= <?= "http://cs.millersville.edu/~sschwartz/366/HTML_CSS_Lab/Images/".$reviewParity.".gif" ?> alt="Rotten" class="reviewer_image"/>
+									<?php 
+										if($review[1] == "ROTTEN"){
+											?>
+											<img src= "http://cs.millersville.edu/~sschwartz/366/HTML_CSS_Lab/Images/rotten.gif" alt="Rotten" class="reviewer_image"/>
+										<?php }
+										else{
+											?>
+											<img src= "http://cs.millersville.edu/~sschwartz/366/HTML_CSS_Lab/Images/rotten.gif" alt="Rotten" class="reviewer_image"/>
+										<?php } ?>
 									<q> <?= trim($review[0]) ?> </q>
 								</p>
 						 	</div>	
@@ -112,8 +120,7 @@
 											?>
 											<img src= "http://cs.millersville.edu/~sschwartz/366/HTML_CSS_Lab/Images/rotten.gif" alt="Rotten" class="reviewer_image"/>
 										<?php } ?>
-									<img src= <?= "http://cs.millersville.edu/~sschwartz/366/HTML_CSS_Lab/Images/".$reviewParity.".gif" ?> alt="Rotten" class="reviewer_image"/>
-									<q> <?= trim($review[0])	 ?> </q>
+									<q> <?= trim($review[0]) ?> </q>
 								</p>
 						 	</div>	
 						 	<div class="reviewer">
