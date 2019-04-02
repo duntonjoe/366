@@ -79,7 +79,7 @@
 										<?php }
 										else{
 											?>
-											<img src= "http://cs.millersville.edu/~sschwartz/366/HTML_CSS_Lab/Images/rotten.gif" alt="Rotten" class="reviewer_image"/>
+											<img src= "http://cs.millersville.edu/~sschwartz/366/HTML_CSS_Lab/Images/fresh.gif" alt="Rotten" class="reviewer_image"/>
 										<?php } ?>
 									<q> <?= trim($review[0]) ?> </q>
 								</p>
@@ -112,7 +112,7 @@
 										<?php }
 										else{
 											?>
-											<img src= "http://cs.millersville.edu/~sschwartz/366/HTML_CSS_Lab/Images/rotten.gif" alt="Rotten" class="reviewer_image"/>
+											<img src= "http://cs.millersville.edu/~sschwartz/366/HTML_CSS_Lab/Images/fresh.gif" alt="Rotten" class="reviewer_image"/>
 										<?php } ?>
 									<q> <?= trim($review[0]) ?> </q>
 								</p>
