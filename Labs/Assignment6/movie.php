@@ -68,12 +68,6 @@
 							$half = floor($count / 2);
 							for($i = 0; $i < $half; $i++){
 								$review = file($reviewFile[$i]);
-								if($review[1] == "ROTTEN"){
-									$reviewParity = "rotten";
-								}
-								else if($review[1] == "FRESH"){
-									$reviewParity = "fresh";
-								}
 					?>
 						<div class="review">
 							<div class="quote">
