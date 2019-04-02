@@ -88,6 +88,7 @@
 									<?= $review[2]."<br />".$review[3] ?>
 								</p>
 							</div>
+						</div>
 						<?php } ?>
 					</div>
 				</div>
@@ -119,7 +120,7 @@
 									<?= $review[2]."<br />".$review[3] ?>
 								</p>
 							</div>
-
+						</div>
 						<?php } ?>
 				</div>
 			</div>
