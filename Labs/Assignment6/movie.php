@@ -73,7 +73,7 @@
 							<div class="quote">
 								<p>
 									<?php 
-										if($review[1] == "ROTTEN"){
+										if(trim($review[1]) == "ROTTEN"){
 											?>
 											<img src= "http://cs.millersville.edu/~sschwartz/366/HTML_CSS_Lab/Images/rotten.gif" alt="Rotten" class="reviewer_image"/>
 										<?php }
@@ -106,7 +106,7 @@
 							<div class="quote">
 								<p>
 									<?php 
-										if($review[1] == "ROTTEN"){
+										if(trim($review[1]) == "ROTTEN"){
 											?>
 											<img src= "http://cs.millersville.edu/~sschwartz/366/HTML_CSS_Lab/Images/rotten.gif" alt="Rotten" class="reviewer_image"/>
 										<?php }
