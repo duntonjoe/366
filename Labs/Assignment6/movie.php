@@ -62,7 +62,7 @@
 				<div class="column_left">
 					
 					<?php 
-							$movie = $_GET["film"];
+							$movie = $_GET["film"]div;
 							$reviewFile = glob($movie."/review*.txt");
 							$count = count($reviewFile);
 							$half = floor($count / 2);
@@ -97,7 +97,7 @@
 							$reviewFile = glob($movie."/review*.txt");
 							$count = count($reviewFile);
 							$half = floor($count / 2);
-							for($i = $half + 1; $i <= $count; $i++){
+							for($i = $half + 1; $i < $count; $i++){
 								$review = file($reviewFile[$i]);
 								if($review[1] == "ROTTEN"){
 									$reviewParity = "rotten";
