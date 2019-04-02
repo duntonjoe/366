@@ -15,3 +15,5 @@
 		<input type="submit" name="submit" value="Sign Up" />
 	</form>
 </div>
+
+<?php include("bottom.html"); ?>
