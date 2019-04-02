@@ -99,7 +99,7 @@
 							$reviewFile = glob($movie."/review*.txt");
 							$count = count($reviewFile);
 							$half = floor($count / 2);
-							for($i = $half + 1; $i < $count; $i++){
+							for($i = $half; $i < $count; $i++){
 								$review = file($reviewFile[$i]);
 					?>
 						<div class="review">
