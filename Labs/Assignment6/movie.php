@@ -62,7 +62,7 @@
 				<div class="column_left">
 					
 					<?php 
-							$movie = $_GET["film"]div;
+							$movie = $_GET["film"];
 							$reviewFile = glob($movie."/review*.txt");
 							$count = count($reviewFile);
 							$half = floor($count / 2);
