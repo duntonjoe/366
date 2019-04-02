@@ -81,7 +81,7 @@
 											?>
 											<img src= "http://cs.millersville.edu/~sschwartz/366/HTML_CSS_Lab/Images/fresh.gif" alt="Rotten" class="reviewer_image"/>
 										<?php } ?>
-									<q> <?= trim($review[0]) ?> </q>
+									<q><?= trim($review[0]) ?></q>
 								</p>
 						 	</div>	
 						 	<div class="reviewer">
@@ -114,7 +114,7 @@
 											?>
 											<img src= "http://cs.millersville.edu/~sschwartz/366/HTML_CSS_Lab/Images/fresh.gif" alt="Rotten" class="reviewer_image"/>
 										<?php } ?>
-									<q> <?= trim($review[0]) ?> </q>
+									<q><?= trim($review[0]) ?></q>
 								</p>
 						 	</div>	
 						 	<div class="reviewer">
