@@ -90,6 +90,7 @@
 							</div>
 						<?php } ?>
 					</div>
+				</div>
 				<div class="column_right">
 					<?php 
 							$movie = $_GET["film"];
