@@ -1,0 +1,8 @@
+4-1-19
+------
+
+All superglobals in PHP are Assoc. Arrays
+
+php includes: include("<target_file");
+
+

@@ -1,0 +1,22 @@
+3-25-19
+---------
+
+unpack an arryay with list() command
+
+HTML - visual aspect of a form
+PHP - process submitted form data
+
+GET - sends any parameters directly in URL
+	*Not Secure
+	*URL Length Is Limited
+	lies in $_GET
+
+POST - embeds parameters in the http packet
+	*can't just be read in url
+	*circumnavigats any lengt limits
+	lives in $_POST
+
+fieldset - groups fields on form
+
+
+

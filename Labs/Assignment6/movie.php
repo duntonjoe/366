@@ -17,6 +17,7 @@
 		</div>
 
 		<?php
+			$movie = $_GET["film"];
 			$info = file($movie . "/info.txt");
 		?>
 		<h1> <?= $info[0] . " (" . $info[1] . ")" ?>  </h1>
@@ -27,19 +28,14 @@
 				<img src= <?= $movie . "/overview.png"?> alt="general overview" />
 
 			<dl>
-				<?php $overview = file($movie . "/overview.txt");
+				<?php 
+					$movie = $_GET["film"];
+					$overview = file($movie . "/overview.txt");
 					foreach($overview as $section){
 					$section = explode(":", $section);
 					print "<dt>".$section[0]."</dt><dd>".$section[1]."</dd>";
 					} 
 				?>
-				<dd>
-					<ul>
-						<li><a href="http://www.ninjaturtles.com/">The Official TMNT Site</a></li>
-						<li><a href="http://www.rottentomatoes.com/m/teenage_mutant_ninja_turtles/">RT Review</a></li>
-						<li><a href="http://www.rottentomatoes.com/">RT Home</a></li>
-					</ul>
-				</dd>
 			</dl>
 
 			</div>
@@ -57,20 +53,28 @@
 				</div>
 				
 				<div class="column_left">
-					<div class="review">
-						<?php foreach(glob((review*.txt) as $reviewFile)){
-								$review = file($reviewFile);
-								if($review[1] == "ROTTEN"){
-									$reviewParity = "rotten";
-								}
-								else if($review[1] == "FRESH"){
-									$reviewParity = "fresh";
-								}
-						?>
+					
+					<?php 
+							$movie = $_GET["film"];
+							$reviewFile = glob($movie."/review*.txt");
+							$count = count($reviewFile);
+							$half = floor($count / 2);
+							for($i = 0; $i < $half; $i++){
+								$review = file($reviewFile[$i]);
+					?>
+						<div class="review">
 							<div class="quote">
 								<p>
-									<img src= <?= "http://cs.millersville.edu/~sschwartz/366/HTML_CSS_Lab/Images/".$reviewParity.".gif" ?> alt="Rotten" class="reviewer_image"/>
-									<q> <?= $review[0] ?> </q>
+									<?php 
+										if(trim($review[1]) == "ROTTEN"){
+											?>
+											<img src= "http://cs.millersville.edu/~sschwartz/366/HTML_CSS_Lab/Images/rotten.gif" alt="Rotten" class="reviewer_image"/>
+										<?php }
+										else{
+											?>
+											<img src= "http://cs.millersville.edu/~sschwartz/366/HTML_CSS_Lab/Images/fresh.gif" alt="Rotten" class="reviewer_image"/>
+										<?php } ?>
+									<q><?= trim($review[0]) ?></q>
 								</p>
 						 	</div>	
 						 	<div class="reviewer">
@@ -79,12 +83,44 @@
 									<?= $review[2]."<br />".$review[3] ?>
 								</p>
 							</div>
+						</div>
 						<?php } ?>
 					</div>
 				<div class="column_right">
+					<?php 
+							$movie = $_GET["film"];
+							$reviewFile = glob($movie."/review*.txt");
+							$count = count($reviewFile);
+							$half = floor($count / 2);
+							for($i = $half; $i < $count; $i++){
+								$review = file($reviewFile[$i]);
+					?>
+						<div class="review">
+							<div class="quote">
+								<p>
+									<?php 
+										if(trim($review[1]) == "ROTTEN"){
+											?>
+											<img src= "http://cs.millersville.edu/~sschwartz/366/HTML_CSS_Lab/Images/rotten.gif" alt="Rotten" class="reviewer_image"/>
+										<?php }
+										else{
+											?>
+											<img src= "http://cs.millersville.edu/~sschwartz/366/HTML_CSS_Lab/Images/fresh.gif" alt="Rotten" class="reviewer_image"/>
+										<?php } ?>
+									<q><?= trim($review[0]) ?></q>
+								</p>
+						 	</div>	
+						 	<div class="reviewer">
+								<p>
+									<img src="http://cs.millersville.edu/~sschwartz/366/HTML_CSS_Lab/Images/critic.gif" alt="Critic" class="reviewer_image"/>
+									<?= $review[2]."<br />".$review[3] ?>
+								</p>
+							</div>
+						</div>
+						<?php } ?>
 				</div>
 			</div>
-			<p id="bottom">(1-10) of 88</p>
+			<p id="bottom">(1-<?=$count?>) of <?=$count?></p>
 		</div>
 		<div id="valid">
 			<a href="http://validator.w3.org/check/referer"><img src="http://cs.millersville.edu/~sschwartz/366/Images/w3c-html.png" alt="Valid HTML5" class="validator"/></a> <br />
