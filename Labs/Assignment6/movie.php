@@ -36,13 +36,6 @@
 					print "<dt>".$section[0]."</dt><dd>".$section[1]."</dd>";
 					} 
 				?>
-				<dd>
-					<ul>
-						<li><a href="http://www.ninjaturtles.com/">The Official TMNT Site</a></li>
-						<li><a href="http://www.rottentomatoes.com/m/teenage_mutant_ninja_turtles/">RT Review</a></li>
-						<li><a href="http://www.rottentomatoes.com/">RT Home</a></li>
-					</ul>
-				</dd>
 			</dl>
 
 			</div>
