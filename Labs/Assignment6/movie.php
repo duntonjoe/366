@@ -79,7 +79,7 @@
 							<div class="quote">
 								<p>
 									<img src= <?= "http://cs.millersville.edu/~sschwartz/366/HTML_CSS_Lab/Images/".$reviewParity.".gif" ?> alt="Rotten" class="reviewer_image"/>
-									<q> <?= $review[0] ?> </q>
+									<q> <?= trim($review[0]) ?> </q>
 								</p>
 						 	</div>	
 						 	<div class="reviewer">
@@ -99,18 +99,21 @@
 							$half = floor($count / 2);
 							for($i = $half + 1; $i < $count; $i++){
 								$review = file($reviewFile[$i]);
-								if($review[1] == "ROTTEN"){
-									$reviewParity = "rotten";
-								}
-								else if($review[1] == "FRESH"){
-									$reviewParity = "fresh";
-								}
 					?>
 						<div class="review">
 							<div class="quote">
 								<p>
+									<?php 
+										if($review[1] == "ROTTEN"){
+											?>
+											<img src= "http://cs.millersville.edu/~sschwartz/366/HTML_CSS_Lab/Images/rotten.gif" alt="Rotten" class="reviewer_image"/>
+										<?php }
+										else{
+											?>
+											<img src= "http://cs.millersville.edu/~sschwartz/366/HTML_CSS_Lab/Images/rotten.gif" alt="Rotten" class="reviewer_image"/>
+										<?php } ?>
 									<img src= <?= "http://cs.millersville.edu/~sschwartz/366/HTML_CSS_Lab/Images/".$reviewParity.".gif" ?> alt="Rotten" class="reviewer_image"/>
-									<q> <?= $review[0] ?> </q>
+									<q> <?= trim($review[0])	 ?> </q>
 								</p>
 						 	</div>	
 						 	<div class="reviewer">
