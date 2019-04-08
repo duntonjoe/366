@@ -6,10 +6,8 @@
 ?>
 
 <h1>Thank You!<h1> <br />
-<br />
 <div>
 	<p>Welcome to NerdLuv, <?= $_POST['name']; ?></p> <br />
-	<br />
 	<p>Now <a href="matches.php"></a>log in to see your matches!</p>
 </div>
 
