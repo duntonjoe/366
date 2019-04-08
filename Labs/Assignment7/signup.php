@@ -1,7 +1,7 @@
 <?php include("top.html"); ?>
 
 
-	<form action="signup-submit.php" method="post">
+	<form action="signup-submit.php" method="POST">
 		<fieldset>
 		<legend>New User Signup:</legend>
 		<ul>
