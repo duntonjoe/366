@@ -3,7 +3,8 @@
 <div>
 	<fieldset class="forms">
 		<legend>Returning User:</legend>
-		<div class="forms">Name:</div> <input type="text" name="name" size="16" maxlength="16" /> <br />
+		<ul>
+			<li><div class="forms">Name:</div> <input type="text" name="name" size="16" maxlength="16" /> </li></ul><br />
 		<input type="submit" name="submit" value="View My Matches" />
 	</fieldset>
 </div>
