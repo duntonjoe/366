@@ -7,9 +7,11 @@
 
 <h1>Thank You!<h1> <br />
 <br />
-<p>Welcome to NerdLuv, <?= $_POST['name']; ?></p> <br />
-<br />
-<p>Now <a href="matches.php"></a>log in to see your matches!</p>
+<div>
+	<p>Welcome to NerdLuv, <?= $_POST['name']; ?></p> <br />
+	<br />
+	<p>Now <a href="matches.php"></a>log in to see your matches!</p>
+</div>
 
 
 <?php include("bottom.html"); ?>
