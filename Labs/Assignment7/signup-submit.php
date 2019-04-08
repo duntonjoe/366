@@ -1,6 +1,9 @@
 <?php include("top.html"); ?>
 
+<?php $name = $_POST('name'); ?>
+
 <div>
+	<?= $name ?>
 	name: <?= echo ($_POST['name'] . "<br />"); ?>
 	gender: <?= echo ($_POST['gender'] . "<br />"); ?>
 	minAge: <?= echo ($_POST['minAge'] . "<br />"); ?>
