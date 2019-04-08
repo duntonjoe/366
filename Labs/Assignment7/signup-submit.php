@@ -1,11 +1,7 @@
 <?php include("top.html"); ?>
 
-<h1><?= $_POST['name']; ?></h1></br	>
-<h1><?= $_POST['age']; ?></h1></br	>
-<h1><?= $_POST['gender']; ?></h1></br>
-<h1><?= $_POST['minAge']; ?></h1></br>
-<h1><?= $_POST['maxAge']; ?></h1></br>
-<h1><?= $_POST['os']; ?></h1></br>
-<h1><?= $_POST['ptype']; ?></h1></br	>
+<?php $dataString = $_POST['name'].",".$_POST['gender'].",".$_POST['age'].",".$_POST['ptype'].",".$_POST['os'].",".$_POST['minAge'].",".$_POST['maxAge']; ?>
+
+<h1><?= $dataString ?></h1>
 
 <?php include("bottom.html"); ?>
