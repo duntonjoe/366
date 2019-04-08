@@ -6,7 +6,7 @@
 ?>
 
 <h1>Thank You!</h1> <br />
-<p>Welcome to NerdLuv, <?= $_POST['name']; ?></p> <br />
+<p>Welcome to NerdLuv, <?= $_POST['name']; ?>!</p> <br />
 <p>Now <a href="matches.php">log in to see your matches!</a></p>
 
 
