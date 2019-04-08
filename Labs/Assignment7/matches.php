@@ -1,10 +1,10 @@
 <?php include("top.html"); ?>
 
 <div>
-	<fieldset class="forms">
+	<fieldset>
 		<legend>Returning User:</legend>
 		<ul>
-			<li><div class="forms">Name:</div> <input type="text" name="name" size="16" maxlength="16" /> </li></ul><br />
+			<li><div class="column">Name:</div> <input type="text" name="name" size="16" maxlength="16" /> </li></ul>
 		<input type="submit" name="submit" value="View My Matches" />
 	</fieldset>
 </div>
