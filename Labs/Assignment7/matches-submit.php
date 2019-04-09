@@ -2,7 +2,7 @@
 
 <?php 
 	$loginName = $_GET['name']; 
-	$single = fopen('singles.txt');
+	$single = fopen('singles.txt','r');
 	$targetUser = 0;
 	$currentUser = array();
 	foreach($single as $user){
