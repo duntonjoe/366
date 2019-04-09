@@ -43,10 +43,10 @@
 			<div class="match">
 				<p><?= $currentUser[0]; ?></p>
 				<ul>
-					<li><strong> <?= $currentUser[1]; ?> </strong></li>
-					<li><strong> <?= $currentUser[2]; ?> </strong></li>
-					<li><strong> <?= $currentUser[3]; ?> </strong></li>
-					<li><strong> <?= $currentUser[4]; ?> </strong></li>
+					<li><strong>gender:</strong> <?= $currentUser[1]; ?> </li>
+					<li><strong>age:</strong> <?= $currentUser[2]; ?> </li>
+					<li><strong>type:</strong> <?= $currentUser[3]; ?> </li>
+					<li><strong>os:</strong> <?= $currentUser[4]; ?> </li>
 				</ul>
 				<img src="user.jpg">
 			</div>
