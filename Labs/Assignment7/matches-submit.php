@@ -41,7 +41,6 @@
 			?>
 
 			<div class="match">
-				<img src="user.jpg">
 				<p><?= $currentUser[0]; ?></p>
 				<ul>
 					<li><strong> <?= $currentUser[1]; ?> </strong></li>
@@ -49,6 +48,7 @@
 					<li><strong> <?= $currentUser[3]; ?> </strong></li>
 					<li><strong> <?= $currentUser[4]; ?> </strong></li>
 				</ul>
+				<img src="user.jpg">
 			</div>
 
 
