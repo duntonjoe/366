@@ -6,7 +6,7 @@
 	$targetUser = 0;
 	$currentUser = array();
 	foreach($single as $user){
-		$currentUser[] = explode(",", $user);
+		array_push($currentUser, explode(",", $user));
 		?>
 		<h1><?= print_r($currentUser); ?></h1><br />
 		<?php
