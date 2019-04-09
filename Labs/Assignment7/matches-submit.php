@@ -8,7 +8,7 @@
 	foreach($single as $user){
 		$currentUser[] = explode(",", $user);
 		if($currentUser[0] == $loginName){
-			$targetUser[] = $currentUser;
+			$targetUser = $currentUser;
 		}
 	}
 ?>
