@@ -36,7 +36,9 @@
 		$currentUser =  explode(",", $user);
 		$ageCheck = ageCheck($currentUser[5], $currentUser[6], $targetUser[1]) && ageCheck($targetUser[5], $targerUser[6], $currentUser[1]);
 		if($currentUser[1] != $targetUser[1] && $currentUser[4] == $targetUser[4] && pcheck($currentUser[3], $targetUser[3]) && $ageCheck){
-			print_r($currentUser);
+			?>
+			<h1><?=print_r($currentUser);?></h1>
+			<?php
 		}
 	}
 ?>
