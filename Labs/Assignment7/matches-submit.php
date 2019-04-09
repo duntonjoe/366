@@ -39,7 +39,7 @@
 
 		if(($currentUser[1] != $targetUser[1]) && ($currentUser[4] == $targetUser[4]) && (pcheck($currentUser[3], $targetUser[3])) && ($ageCheck)){
 			?>
-			<h1><?= print_r($targetUser); ?></h1>
+			<h1><?= print_r($currentUser); ?></h1>
 			<?php
 		}
 	}
