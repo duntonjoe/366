@@ -4,7 +4,7 @@
 	$loginName = $_GET['name']; 
 	$single = file('singles.txt');
 	$targetUser;
-	$currentUser
+	$currentUser;
 	foreach($single as $user){
 		$currentUser =  explode(",", $user);
 		if($currentUser[0] == $loginName){
