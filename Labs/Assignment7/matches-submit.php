@@ -44,14 +44,14 @@
 			?>
 
 			<div class="match">
-				<p><?= $currentUser[0]; ?></p>
-				<ul>
+				<p class="match"><?= $currentUser[0]; ?></p>
+				<ul class="match">
 					<li><strong>gender:</strong> <?= $currentUser[1]; ?> </li>
 					<li><strong>age:</strong> <?= $currentUser[2]; ?> </li>
 					<li><strong>type:</strong> <?= $currentUser[3]; ?> </li>
 					<li><strong>os:</strong> <?= $currentUser[4]; ?> </li>
 				</ul>
-				<img src="user.jpg">
+				<img src="user.jpg" class="match">
 			</div>
 
 
