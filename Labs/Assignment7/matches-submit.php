@@ -9,7 +9,6 @@
 		$currentUser[] = explode(",", $user);
 		?>
 		<h1><?= print_r($currenUser); ?></h1><br />
-		?>
 		<?php
 		if($currentUser[0] == $loginName){
 			$targetUser = $currentUser;
