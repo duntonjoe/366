@@ -28,10 +28,14 @@
 	foreach($single as $user){
 		$currentUser =  explode(",", $user);
 		if($currentUser[0] == $loginName){
+			?>
+			<h1><?= print_r($targetUser); ?></h1>
+			<?php
 			$targetUser = $currentUser;
 			break;
 		}
 	}
+
 	foreach($single as $user){
 		$currentUser =  explode(",", $user);
 		$ageCheck = ageCheck($currentUser[5], $currentUser[6], $targetUser[1]) && ageCheck($targetUser[5], $targerUser[6], $currentUser[1]);
