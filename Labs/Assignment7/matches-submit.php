@@ -51,7 +51,9 @@
 					<li><strong>type:</strong> <?= $currentUser[3]; ?> </li>
 					<li><strong>os:</strong> <?= $currentUser[4]; ?> </li>
 				</ul>
-				<img src="user.jpg" class="match">
+				<div>
+					<img src="user.jpg" class="match">
+				</div>
 			</div>
 
 
