@@ -22,9 +22,9 @@
 			<li>
 				<div class="column">Favorite OS:</div>
 				<select name="os" required class = "forms">
-						<option value="windows">Windows</option>
-						<option value="macOS">MacOS</option>
-						<option value="linux">Linux</option>
+						<option>Windows</option>
+						<option>Mac OS X</option>
+						<option>Linux</option>
 				</select>
 			</li>
 			<li>
