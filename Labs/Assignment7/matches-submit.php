@@ -5,7 +5,7 @@
 	$single = fopen('singles.txt');
 	$targetUser = 0;
 	$currentUser = array();
-	for each($single as $user){
+	foreach($single as $user){
 		$currentUser[] = explode(",", $user);
 		if($currentUser[0] == $loginName){
 			$targetUser[] = $currentUser;
@@ -13,7 +13,7 @@
 	}
 ?>
 
-<h1><?= $targetUser[0];?></h1>
+<h1><?= $targetUser[0]; ?></h1>
 
 
 <?php include("bottom.html"); ?>
