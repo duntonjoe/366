@@ -13,7 +13,7 @@
 	}
 ?>
 
-<h1><?= print_r($single); ?></h1>
+<h1><?= print_r($targetUser); ?></h1>
 
 
 <?php include("bottom.html"); ?>
