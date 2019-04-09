@@ -4,9 +4,9 @@
 	$loginName = $_GET['name']; 
 	$single = file('singles.txt');
 	$targetUser;
-	$currentUser = array();
+	$currentUser
 	foreach($single as $user){
-		array_push($currentUser, explode(",", $user));
+		$currentUser =  explode(",", $user);
 		if($currentUser[0] == $loginName){
 			$targetUser = $currentUser;
 		}
