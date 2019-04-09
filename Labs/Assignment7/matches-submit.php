@@ -36,10 +36,8 @@
 	foreach($single as $user){
 		$currentUser =  explode(",", $user);
 		$ageCheck = ageCheck($currentUser[5], $currentUser[6], $targetUser[1]) && ageCheck($targetUser[5], $targerUser[6], $currentUser[1]);
-					?>
-			<h1><?= print_r($targetUser); ?></h1>
-			<?php
-		if($currentUser[1] != $targetUser[1] && $currentUser[4] == $targetUser[4] && pcheck($currentUser[3], $targetUser[3]) && $ageCheck){
+
+		if(($currentUser[1] != $targetUser[1]) && ($currentUser[4] == $targetUser[4]) && (pcheck($currentUser[3], $targetUser[3])) && ($ageCheck)){
 			?>
 			<h1><?= print_r($targetUser); ?></h1>
 			<?php
