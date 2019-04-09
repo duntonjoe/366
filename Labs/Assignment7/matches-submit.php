@@ -33,7 +33,7 @@
 		}
 	}
 	?>
-	<p>Matches for <?= $targetUser[0] ?></p>
+	<strong>Matches for <?= $targetUser[0] ?></strong>
 	<?php
 
 	foreach($single as $user){
