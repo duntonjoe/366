@@ -7,16 +7,13 @@
 	$currentUser = array();
 	foreach($single as $user){
 		array_push($currentUser, explode(",", $user));
-		?>
-		<h1><?= print_r($currentUser); ?></h1><br />
-		<?php
 		if($currentUser[0] == $loginName){
 			$targetUser = $currentUser;
 		}
 	}
 ?>
 
-
+<h1><?= print_r($targetUser); ?></h1><br />
 
 
 <?php include("bottom.html"); ?>
