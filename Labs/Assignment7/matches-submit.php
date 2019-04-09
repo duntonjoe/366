@@ -9,6 +9,7 @@
 		$currentUser =  explode(",", $user);
 		if($currentUser[0] == $loginName){
 			$targetUser = $currentUser;
+			break;
 		}
 	}
 ?>
