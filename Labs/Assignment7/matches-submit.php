@@ -39,7 +39,19 @@
 
 		if($currentUser[1] != $targetUser[1] && $currentUser[4] == $targetUser[4] && pcheck($currentUser[3], $targetUser[3]) && $ageCheck){
 			?>
-			<h1><?= print_r($currentUser); ?></h1>
+
+			<div class="match">
+				<img src="user.jpg">
+				<p><?= $currentUser[0]; ?></p>
+				<ul>
+					<li><strong> <?= $currentUser[1]; ?> </strong></li>
+					<li><strong> <?= $currentUser[2]; ?> </strong></li>
+					<li><strong> <?= $currentUser[3]; ?> </strong></li>
+					<li><strong> <?= $currentUser[4]; ?> </strong></li>
+				</ul>
+			</div>
+
+
 			<?php
 		}
 	}
