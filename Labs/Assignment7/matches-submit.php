@@ -41,7 +41,5 @@
 	}
 ?>
 
-<h1><?= print_r($targetUser); ?></h1><br />
-
 
 <?php include("bottom.html"); ?>
