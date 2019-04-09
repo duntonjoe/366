@@ -3,7 +3,7 @@
 <?php 
 	$loginName = $_GET['name']; 
 	$single = file('singles.txt');
-	$targetUser = 0;
+	$targetUser;
 	$currentUser = array();
 	foreach($single as $user){
 		array_push($currentUser, explode(",", $user));
