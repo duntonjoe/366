@@ -28,10 +28,10 @@
 	foreach($single as $user){
 		$currentUser =  explode(",", $user);
 		if($currentUser[0] == $loginName){
+			$targetUser = $currentUser;
 			?>
 			<h1><?= print_r($targetUser); ?></h1>
 			<?php
-			$targetUser = $currentUser;
 			break;
 		}
 	}
