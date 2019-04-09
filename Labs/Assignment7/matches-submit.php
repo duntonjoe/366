@@ -8,7 +8,7 @@
 	foreach($single as $user){
 		$currentUser[] = explode(",", $user);
 		?>
-		<h1><?= print_r($currenUser); ?></h1><br />
+		<h1><?= print_r($currentUser); ?></h1><br />
 		<?php
 		if($currentUser[0] == $loginName){
 			$targetUser = $currentUser;
