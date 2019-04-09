@@ -32,6 +32,9 @@
 			break;
 		}
 	}
+	?>
+	<p>Matches for <?= $targetUser[0] ?></p>
+	<?php
 
 	foreach($single as $user){
 		$currentUser =  explode(",", $user);
