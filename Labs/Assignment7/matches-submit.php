@@ -33,11 +33,13 @@
 		}
 	}
 	?>
+
 	<strong>Matches for <?= $targetUser[0] ?></strong>
 	<?php
 
 	foreach($single as $user){
 		$currentUser =  explode(",", $user);
+		print_r($currentUser);
 		$ageCheck = ageCheck($currentUser[5], $currentUser[6], $targetUser[2]) && ageCheck($targetUser[5], $targetUser[6], $currentUser[2]);
 
 		if($currentUser[1] != $targetUser[1] && $currentUser[4] == $targetUser[4] && pcheck($currentUser[3], $targetUser[3]) && $ageCheck){
