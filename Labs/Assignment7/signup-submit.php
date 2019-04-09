@@ -2,6 +2,7 @@
 
 <?php $dataString = $_POST['name'].",".$_POST['gender'].",".$_POST['age'].",".$_POST['ptype'].",".$_POST['os'].",".$_POST['minAge'].",".$_POST['maxAge']; 
 		$singles = 'singles.txt';
+		print_r($dataString);
 		file_put_contents($singles, $dataString, FILE_APPEND);
 ?>
 
