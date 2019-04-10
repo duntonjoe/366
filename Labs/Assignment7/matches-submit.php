@@ -2,7 +2,7 @@
 
 <?php 
 		function pcheck($a , $b){
-			for($i = 0; $i < 3; $i++){
+			for($i = 0; $i < 4; $i++){
 				if($a[$i] == $b[$i]){
 					return true;
 				}
@@ -45,12 +45,12 @@
 			?>
 
 			<div class="match">
-				<p class="match"><img src="user.jpg" class="match"> <?= $currentUser[0]; ?></p>
-				<ul class="match">
+				<p><img src="user.jpg"> <?= $currentUser[0]; ?></p>
+				<ul>
 					<li><strong>gender:</strong> <?= $currentUser[1]; ?> </li>
 					<li><strong>age:</strong> <?= $currentUser[2]; ?> </li>
 					<li><strong>type:</strong> <?= $currentUser[3]; ?> </li>
-					<li><strong>os:</strong> <?= $currentUser[4]; ?> </li>
+					<li><strong>OS:</strong> <?= $currentUser[4]; ?> </li>
 				</ul>
 			</div>
 

@@ -9,7 +9,7 @@
 			<li>
 				<div class="column">Gender:</div> 
 				<label><input type="radio" name="gender" value="M" />Male</label>
-				<label><input type="radio" name="gender" value="F"/>Female</label>
+				<label><input type="radio" name="gender" value="F" checked />Female</label>
 			</li>
 			<li>
 				<div class="column">Age:</div>
@@ -21,7 +21,7 @@
 			</li>
 			<li>
 				<div class="column">Favorite OS:</div>
-				<select name="os" required class = "forms">
+				<select name="os">
 						<option>Windows</option>
 						<option>Mac OS X</option>
 						<option>Linux</option>
