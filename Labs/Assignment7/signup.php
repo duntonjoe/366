@@ -17,7 +17,7 @@
 			</li>
 			<li>
 				<div class="column">Personality Type:</div>
-				<input type="test" name="ptype" size="6" maxlength="4"/> (<a href="http://www.humanmetrics.com/cgi-win/JTypes2.asp">Don't know your type?</a>)
+				<input type="text" name="ptype" size="6" maxlength="4"/> (<a href="http://www.humanmetrics.com/cgi-win/JTypes2.asp">Don't know your type?</a>)
 			</li>
 			<li>
 				<div class="column">Favorite OS:</div>
