@@ -3,7 +3,7 @@
 
 <?php
 	#$url = "http://".$_SERVER['HTTP_HOST']."/Lab8/nerdluv.php";
-	$url = "http://".$_SERVER['HTTP_HOST']."/366/Labs/Assignment8/nerdluv.php";
+	$url = "https://".$_SERVER['HTTP_HOST']."/366/Labs/Assignment8/nerdluv.php";
 	$postParameters = http_build_query(
 		array(
 			'name' => $_POST['name'],
