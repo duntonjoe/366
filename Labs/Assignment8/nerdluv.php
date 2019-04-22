@@ -115,7 +115,7 @@ function getBasicMatches($dbconn,$user) {
 function getMatches($usertype, $matches) {
 	$realMatches = array();
 
-	foreach($match in $matches){
+	foreach($matches as $match){
 		if (pcheck($usertype, $match[3])){
 				$realMatches[] = $match;
 		}
