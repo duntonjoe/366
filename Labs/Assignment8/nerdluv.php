@@ -63,7 +63,7 @@ if($_SERVER["REQUEST_METHOD"] == "GET"){
 	$user = getUser($db_connect, $_GET['name']);
 	getMatches($user[3], getBasicMatches($db_connect, $user));
 
-} elseif ($_SERVER["REQUST_METHOD"] == "POST") {
+} elseif ($_SERVER["REQUEST_METHOD"] == "POST") {
 	# add a new user
 	$db_connect = getConnection($username, $login);
 	$addUserStatus = addUser($db_connect, $_POST[0], $_POST[1], $_POST[2], $_POST[3], $_POST[4], $_POST[5], $_POST[6]);
