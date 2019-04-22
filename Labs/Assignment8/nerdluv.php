@@ -66,7 +66,7 @@ if($_SERVER["REQUEST_METHOD"] == "GET"){
 } elseif ($_SERVER["REQUEST_METHOD"] == "POST") {
 	# add a new user
 	$db_connect = getConnection($username, $login);
-	$addUserStatus = addUser($db_connect, $_POST[0], $_POST[1], $_POST[2], $_POST[3], $_POST[4], $_POST[5], $_POST[6]);
+	$addUserStatus = addUser($db_connect, $_POST['name'], $_POST['gender'], $_POST['age'], $_POST['ptype'], $_POST['os'], $_POST['minAge'], $_POST['maxAge']);
 	if(!($addUserStatus)){
 		var_dump(http_response_code(400));
 	}
