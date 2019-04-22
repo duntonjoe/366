@@ -8,7 +8,7 @@
 			'name' => $_POST['name'],
 			'gender' => $_POST['gender'],
 			'age' => $_POST['age'],
-			'ptype' => $_POST['pytpe'],
+			'ptype' => $_POST['ptype'],
 			'os' => $_POST['os'],
 			'minAge' => $_POST['minAge'],
 			'maxAge' => $_POST['maxAge']
