@@ -79,8 +79,14 @@ if($_SERVER["REQUEST_METHOD"] == "GET"){
 	in the db.txt file and it should use PDO to connect to the database.
 	The database connection should be returned. */
 function getConnection($username, $login) {
+	try {
 	$connection = new PDO("mysql:dbname=nerdluv;host=localhost",$username,$login);
 	return $connection;
+}
+catch (PDOException $e) {
+	die("error");
+	print $e->getMessage();	
+}
 }
 
 /* This function takes in a PDO object that should already be connected to 
