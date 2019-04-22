@@ -44,16 +44,40 @@ header("Content-type: application/json");
 /* Your db.txt file should contain two variable initializations:
 	$username (probably "admin", your db username)
 	$login (the password for your db login) */
+	function pcheck($a , $b){
+	for($i = 0; $i < 4; $i++){
+		if($a[$i] == $b[$i]){
+			return true;
+		}
+	}
+	return false;
+}
+
 include("/var/db.php");
 
 /* You should put logic here to handle the POST request to add a new 
 user and the GET request to get matches for a user */
+if($_SERVER["REQUEST_METHOD"] == "GET"){
+	#get matches for a given user
+
+} elseif ($_SERVER["REQUST_METHOD"] == "POST") {
+	# add a new user
+	$db_connect = getConnection($username, $login);
+	$addUserStatus = addUser($db_connect, $_POST[0], $_POST[1], $_POST[2], $_POST[3], $_POST[4], $_POST[5], $_POST[6]);
+	if(!($addUserStatus)){
+		#return 400 status
+	}
+
+}
+
 
 
 /* This function should take in the $username and $login that were initialized
 	in the db.txt file and it should use PDO to connect to the database.
 	The database connection should be returned. */
 function getConnection($username, $login) {
+	$connection = new PDO("mysql:dbname=nerdluv;host=localhost",$username,$login);
+	return $connection;
 }
 
 /* This function takes in a PDO object that should already be connected to 
@@ -62,6 +86,10 @@ function getConnection($username, $login) {
 	a prepared statement) and get the row that matches the $name as a *numerically
 	indexed* array. This array should be returned. */
 function getUser($dbconn,$name) {
+
+	$userRow = $dbconn->prepare('SELECT * WHERE name = :name');
+	$userRow->execute(':name' => $name); 
+	return $userRow->fetch(PDO::FETCH_NUM);
 }
 
 /* Given a PDO object (already connected to DB) and a numerically indexed array of data
@@ -72,6 +100,9 @@ function getUser($dbconn,$name) {
 	done by a prepared statement with parameters. Return the rows in a multi-dimensional 
 	*associative* array (unless there are no results) */
 function getBasicMatches($dbconn,$user) {
+	$basicMatches = $dbconn->prepare('SELECT * WHERE gender != :gender AND os = :os AND minAge <= :age AND maxAge => :age');
+	$basicMatches->execute(array(':gender' => $user[1], ':age' => $user[2], ':os' => $user[4]));
+	return $basicMatches->fetchAll(PDO::FETCH_ASSOC);
 }
 
 /* Given the string representing the user's personality type and the result set from
@@ -80,12 +111,22 @@ function getBasicMatches($dbconn,$user) {
 	should be multi-dimensional associative array when passed in, and the return value should
 	also be a multi-dimensional associative array (unless there are no results) */
 function getMatches($usertype, $matches) {
+	$realMatches = array();
+
+	foreach($match in $matches){
+		if (pcheck($usertype, $match[3])){
+				$realMatches[] = $match;
+		}
+	}
+	return $realMatches;
 }
 
 /* Given a PDO object (already connected to DB) and all of the information necessary for
 	a new user, this function should add the new user to the database. Return value should be
 	true or false */
 function addUser($dbconn, $name, $gender, $age, $type, $os, $minage, $maxage) {
+	$sql = "INSERT INTO users (name, gender, age, type, os, minage, maxage) VALUES ('$name', '$gender', '$age', '$type', '$os', '$minage', '$maxage')";
+	return $dbconn->query($sql);
 }
 
 
