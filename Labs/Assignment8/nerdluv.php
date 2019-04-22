@@ -59,13 +59,16 @@ include("/var/db.php");
 user and the GET request to get matches for a user */
 if($_SERVER["REQUEST_METHOD"] == "GET"){
 	#get matches for a given user
+	$db_connect = getConnection($username, $login);
+	$user = getUser($db_connect, $_GET['name']);
+	getMatches($user[3], getBasicMatches($db_connect, $user));
 
 } elseif ($_SERVER["REQUST_METHOD"] == "POST") {
 	# add a new user
 	$db_connect = getConnection($username, $login);
 	$addUserStatus = addUser($db_connect, $_POST[0], $_POST[1], $_POST[2], $_POST[3], $_POST[4], $_POST[5], $_POST[6]);
 	if(!($addUserStatus)){
-		#return 400 status
+		var_dump(http_response_code(400));
 	}
 
 }
@@ -86,9 +89,8 @@ function getConnection($username, $login) {
 	a prepared statement) and get the row that matches the $name as a *numerically
 	indexed* array. This array should be returned. */
 function getUser($dbconn,$name) {
-
 	$userRow = $dbconn->prepare('SELECT * WHERE name = :name');
-	$userRow->execute(':name' => $name); 
+	$userRow->execute(array(':name' => $name)); 
 	return $userRow->fetch(PDO::FETCH_NUM);
 }
 
