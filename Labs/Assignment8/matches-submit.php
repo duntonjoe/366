@@ -7,7 +7,7 @@
 	<strong>Matches for <?= $name ?></strong>
 
 <?php 
-	foreach($jsonData->data as $line){
+	foreach($jsonData[data] as $line){
 ?>
 			<div class="match">
 				<p><img src="user.jpg" alt="user image"> <?= $line['name']; ?></p>
