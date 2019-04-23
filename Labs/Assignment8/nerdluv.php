@@ -109,7 +109,7 @@ function getUser($dbconn,$name) {
 	*associative* array (unless there are no results) */
 function getBasicMatches($dbconn,$user) {
 	$basicMatches = $dbconn->prepare('SELECT * WHERE gender != :gender AND os = :os AND minAge <= :age AND maxAge => :age');
-	$basicMatches->execute(array(':gender' => $user[1], ':age' => $user[2], ':os' => $user[4]));
+	$basicMatches->execute(array(':gender' => $user[1], ':age' => $user[2], ':age' => $user[2], ':os' => $user[4]));
 	return $basicMatches->fetchAll(PDO::FETCH_ASSOC);
 }
 
@@ -122,7 +122,7 @@ function getMatches($usertype, $matches) {
 	$realMatches = array();
 
 	foreach($matches as $match){
-		if (pcheck($usertype, $match[3])){
+		if (pcheck($usertype, $match['ptype'])){
 				$realMatches[] = $match;
 		}
 	}
