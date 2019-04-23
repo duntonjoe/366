@@ -61,6 +61,7 @@ if($_SERVER["REQUEST_METHOD"] == "GET"){
 	#get matches for a given user
 	$db_connect = getConnection($username, $login);
 	$user = getUser($db_connect, $_GET['name']);
+	print("hello");
 	print(json_encode(getMatches($user[3], getBasicMatches($db_connect, $user))));
 
 } elseif ($_SERVER["REQUEST_METHOD"] == "POST") {
