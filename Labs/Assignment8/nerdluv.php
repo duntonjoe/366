@@ -61,20 +61,19 @@ if($_SERVER["REQUEST_METHOD"] == "GET"){
 	#get matches for a given user
 	$db_connect = getConnection($username, $login);
 	$user = getUser($db_connect, $_GET['name']);
-	$encodedJSON = json_encode(getMatches($user[3], getBasicMatches($db_connect, $user)));
-	print($encodedJSON);
+	getMatches($user[3], getBasicMatches($db_connect, $user));
 
 } elseif ($_SERVER["REQUEST_METHOD"] == "POST") {
 	# add a new user
+	try {
 	$db_connect = getConnection($username, $login);
 	$addUserStatus = addUser($db_connect, $_POST['name'], $_POST['gender'], $_POST['age'], $_POST['ptype'], $_POST['os'], $_POST['minAge'], $_POST['maxAge']);
-	if(!($addUserStatus)){
-		var_dump(http_response_code(400));
+	} catch(PDOException $e) {
+		header("HTTP/1.1 400 Invalid Request");
+        print $e->getMessage();
+
 	}
-
 }
-
-
 
 /* This function should take in the $username and $login that were initialized
 	in the db.txt file and it should use PDO to connect to the database.
@@ -83,7 +82,7 @@ function getConnection($username, $login) {
 	try {
 	$connection = new PDO("mysql:dbname=nerdluv;host=localhost",$username,$login);
 	return $connection;
-	}
+}
 catch (PDOException $e) {
 	die("error");
 	print $e->getMessage();	
@@ -134,12 +133,15 @@ function getMatches($usertype, $matches) {
 	a new user, this function should add the new user to the database. Return value should be
 	true or false */
 function addUser($dbconn, $name, $gender, $age, $type, $os, $minage, $maxage) {
-	$sql = "INSERT INTO users (name, gender, age, type, os, minage, maxage) VALUES ('$name', '$gender', '$age', '$type', '$os', '$minage', '$maxage')";
-	return $dbconn->query($sql);
+	try{
+	$addUserRow = $dbconn->prepare('INSERT INTO users values (:name, :gender, :age, :type, :os, :minage, :maxage)');
+	$basicMatches->execute(array(':name' => $name, ':gender' => $gender, ':age' => $age, ':type' => $type, ':os' => $os, 
+			':minage' => $minage, ':maxage' => $maxage));
+	return true;
+	}
+	catch(PDOException e){
+		return false;
+	}
 }
-
-
-
-
 
 ?>
