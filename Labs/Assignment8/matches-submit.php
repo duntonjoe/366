@@ -1,6 +1,6 @@
 <?php include("top.html");
 
-	$url = "http://".$_SERVER['HTTP_HOST']."/366/Labs/Assignment8/nerdluv.php";
+	$url = "http://".$_SERVER['HTTP_HOST']."/366/Labs/Assignment8/nerdluv.php?";
 	$name = $_GET['name'];
 
 	$matches = http_build_query(array('name' => $name));
