@@ -111,7 +111,8 @@ function getUser($dbconn,$name) {
 	done by a prepared statement with parameters. Return the rows in a multi-dimensional 
 	*associative* array (unless there are no results) */
 function getBasicMatches($dbconn,$user) {
-	$basicMatches = $dbconn->prepare('SELECT * FROM users WHERE gender != :gender AND os = :os AND minAge <= :age AND maxAge => :age');
+	#$basicMatches = $dbconn->prepare('SELECT * FROM users WHERE gender != :gender AND os = :os AND minAge <= :age AND maxAge => :age');
+	$basicMatches = $dbconn->prepare('SELECT * FROM users');
 	$basicMatches->execute(array(':gender' => $user[1], ':os' => $user[4], ':age' => $user[2], ':age' => $user[2]));
 	return $basicMatches->fetchAll(PDO::FETCH_ASSOC);
 }
