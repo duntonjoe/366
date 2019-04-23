@@ -3,7 +3,7 @@
 	$name = $_GET['name'];
 	$matches = http_build_query(array('name' => $name));
 	$jsonData = json_decode(file_get_contents($url.$matches), true);
-	print($jsonData);
+	print(json_encode($jsonData));
 ?>
 	<strong>Matches for <?= $name ?></strong>
 
