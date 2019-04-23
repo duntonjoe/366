@@ -95,9 +95,10 @@ catch (PDOException $e) {
 	a prepared statement) and get the row that matches the $name as a *numerically
 	indexed* array. This array should be returned. */
 function getUser($dbconn,$name) {
-	$userRow = $dbconn->prepare('SELECT * from users WHERE name = :name');
+	$userRow = $dbconn->prepare('SELECT * FROM users WHERE name = :name');
 	$userRow->execute(array(':name' => $name)); 
 	return $userRow->fetch(PDO::FETCH_NUM);
+	
 }
 
 /* Given a PDO object (already connected to DB) and a numerically indexed array of data
@@ -108,7 +109,7 @@ function getUser($dbconn,$name) {
 	done by a prepared statement with parameters. Return the rows in a multi-dimensional 
 	*associative* array (unless there are no results) */
 function getBasicMatches($dbconn,$user) {
-	$basicMatches = $dbconn->prepare('SELECT * from users WHERE gender != :gender AND os = :os AND minAge <= :age AND maxAge => :age');
+	$basicMatches = $dbconn->prepare('SELECT * FROM users WHERE gender != :gender AND os = :os AND minAge <= :age AND maxAge => :age');
 	$basicMatches->execute(array(':gender' => $user[1], ':os' => $user[4], ':age' => $user[2], ':age' => $user[2]));
 	return $basicMatches->fetchAll(PDO::FETCH_ASSOC);
 }
@@ -120,7 +121,6 @@ function getBasicMatches($dbconn,$user) {
 	also be a multi-dimensional associative array (unless there are no results) */
 function getMatches($usertype, $matches) {
 	$realMatches = array();
-
 	foreach($matches as $match){
 		if (pcheck($usertype, $match['ptype'])){
 				array_push($realMatches, $match);
