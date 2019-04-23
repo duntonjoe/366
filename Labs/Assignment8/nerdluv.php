@@ -123,7 +123,7 @@ function getMatches($usertype, $matches) {
 
 	foreach($matches as $match){
 		if (pcheck($usertype, $match['ptype'])){
-				$realMatches[] = $match;
+				array_push($realMatches, $match);
 		}
 	}
 	return $realMatches;
