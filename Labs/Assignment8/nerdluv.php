@@ -139,7 +139,7 @@ function addUser($dbconn, $name, $gender, $age, $type, $os, $minage, $maxage) {
 			':minage' => $minage, ':maxage' => $maxage));
 	return true;
 	}
-	catch(PDOException e){
+	catch(PDOException $e){
 		return false;
 	}
 }
