@@ -116,10 +116,10 @@ function getBasicMatches($dbconn,$user) {
 	$basicMatches = $dbconn->prepare('SELECT * FROM users WHERE 
 										gender != :UserGender AND 
 										os = :UserOs AND 
-										minAge <= :UserAge AND 
-										maxAge => :UserAge AND
-										:UserMinAge <= age AND
-										:UserMaxAge >= age');
+										:UserAge >= minAge AND 
+										:UserAge => maxAge AND
+										age >= :UserMinAge AND
+										age <= :UserMaxAge;');
 	
 	$basicMatches->execute(array(':UserGender' => $user[1], 
 								':UserOs' => $user[4], 
