@@ -2,8 +2,8 @@
 	$url = "http://".$_SERVER['HTTP_HOST']."/366/Labs/Assignment8/nerdluv.php?";
 	$name = $_GET['name'];
 	$matches = http_build_query(array('name' => $name));
-	print($url.$matches);
 	$jsonData = json_decode(file_get_contents($url.$matches), true);
+	print($jsonData);
 ?>
 	<strong>Matches for <?= $name ?></strong>
 
