@@ -149,7 +149,7 @@ function getMatches($usertype, $matches) {
 function addUser($dbconn, $name, $gender, $age, $type, $os, $minage, $maxage) {
 	try{
 	$addUserRow = $dbconn->prepare('INSERT INTO users values (:name, :gender, :age, :type, :os, :minage, :maxage)');
-	$basicMatches->execute(array(':name' => $name, ':gender' => $gender, ':age' => $age, ':type' => $type, ':os' => $os, 
+	$addUserRow->execute(array(':name' => $name, ':gender' => $gender, ':age' => $age, ':type' => $type, ':os' => $os, 
 			':minage' => $minage, ':maxage' => $maxage));
 	return true;
 	}
