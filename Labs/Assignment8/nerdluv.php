@@ -124,7 +124,7 @@ function getBasicMatches($dbconn,$user) {
 								':os' => $user[4], 
 								':age' => $user[2], 
 								':age' => $user[2],
-								':minAge' => $user[6]
+								':minAge' => $user[6],
 								':maxAge' => $user[7]));
 	return $basicMatches->fetchAll(PDO::FETCH_ASSOC);
 }
