@@ -19,9 +19,13 @@ body {
 	border: 5px;
 	border-style: solid;
 	font-size: 40pt;
+	color: #FFFFFF;
+	border-color: #000000;
   	background-repeat: no-repeat;
   	background-image: url("./background.jpg");
 }
+
+/** row 1 **/
 
 #puzzlearea > div:nth-child(1){
 	background-position: 0px 0px;
@@ -39,6 +43,8 @@ body {
 	background-position: -300px 0px;
 }
 
+/** row 2 **/
+
 #puzzlearea > div:nth-child(5){
 	background-position: 0px -100px;
 }
@@ -55,6 +61,8 @@ body {
 	background-position: -300px -100px;
 }
 
+/** row 3 **/
+
 #puzzlearea > div:nth-child(9){
 	background-position: 0px -200px;
 }
@@ -70,6 +78,8 @@ body {
 #puzzlearea > div:nth-child(12){
 	background-position: -300px -200px;
 }
+
+/** row 4 **/
 
 #puzzlearea > div:nth-child(13){
 	background-position: 0px -300px;

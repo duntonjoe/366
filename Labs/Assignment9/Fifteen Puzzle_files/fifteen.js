@@ -1,11 +1,9 @@
+var puzzle = [[1,2,3,4], [5,6,7,8], [9,10,11,12], [13,14,15,16]];
 
-/** populate pieces with correct background segments **/
+$("#puzzlearea > div").click(
 
-$( document ).ready(function() {
-    var i;
-    var targetPiece;
-	for( i = 0; i <= 15; i++;){
-		targetPiece = $("#puzzlearea:nth-child(i)");
-		targetPiece.style.backgroundImage = "url(./friend.jpg)";
+	function() {
+		var currPieceNumber = $(this).index();
+		console.log(currPieceNumber);
 	}
-});
+);
