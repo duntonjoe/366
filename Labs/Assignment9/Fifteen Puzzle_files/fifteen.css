@@ -92,3 +92,9 @@ body {
 #puzzlearea > div:nth-child(15){
 	background-position: -200px -300px;
 }
+
+#puzzlearea > div:nth-child(16){
+	background-color: #FFFFFF !important;
+	background-image: url() !important;
+	border-color: #FFFFFF !important;
+}
