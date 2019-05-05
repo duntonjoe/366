@@ -1,0 +1,100 @@
+body {
+	text-align: center;
+	font-family: cursive;
+}
+
+
+#puzzlearea{
+	margin-left: auto;
+	margin-right: auto;
+	width: 400px;
+	height: 400px;
+	display: grid;
+  	grid-template-columns: repeat(4, 100px);
+}
+
+#puzzlearea > div {
+	width: 90px;
+	height: 90px;
+	border: 5px;
+	border-style: solid;
+	font-size: 40pt;
+	color: #FFFFFF;
+	border-color: #000000;
+  	background-repeat: no-repeat;
+  	background-image: url("./background.jpg");
+}
+
+/** row 1 **/
+
+#puzzlearea > div:nth-child(1){
+	background-position: 0px 0px;
+}
+
+#puzzlearea > div:nth-child(2){
+	background-position: -100px 0px;
+}
+
+#puzzlearea > div:nth-child(3){
+	background-position: -200px 0px;
+}
+
+#puzzlearea > div:nth-child(4){
+	background-position: -300px 0px;
+}
+
+/** row 2 **/
+
+#puzzlearea > div:nth-child(5){
+	background-position: 0px -100px;
+}
+
+#puzzlearea > div:nth-child(6){
+	background-position: -100px -100px;
+}
+
+#puzzlearea > div:nth-child(7){
+	background-position: -200px -100px;
+}
+
+#puzzlearea > div:nth-child(8){
+	background-position: -300px -100px;
+}
+
+/** row 3 **/
+
+#puzzlearea > div:nth-child(9){
+	background-position: 0px -200px;
+}
+
+#puzzlearea > div:nth-child(10){
+	background-position: -100px -200px;
+}
+
+#puzzlearea > div:nth-child(11){
+	background-position: -200px -200px;
+}
+
+#puzzlearea > div:nth-child(12){
+	background-position: -300px -200px;
+}
+
+/** row 4 **/
+
+#puzzlearea > div:nth-child(13){
+	background-position: 0px -300px;
+}
+
+#puzzlearea > div:nth-child(14){
+	background-position: -100px -300px;
+}
+
+#puzzlearea > div:nth-child(15){
+	background-position: -200px -300px;
+}
+
+#puzzlearea > div:nth-child(16){
+	background-color: #FFFFFF !important;
+	background-image: url() !important;
+	border-color: #FFFFFF !important;
+}
