@@ -41,6 +41,25 @@ $(document).ready(function() {
 			}
 		});
 
+	$("#puzzlearea > div").mouseover(function(){
+		var currPiecePos = $(this).position();
+  		if((Math.abs(currPiecePos.left - piece16left) == 100) && (Math.abs(currPiecePos.top - piece16top) != 100)){
+				$(this).css("color", "red");
+				return;
+			}
+			else if ((Math.abs(currPiecePos.top - piece16top) == 100) && (Math.abs(currPiecePos.left - piece16left) != 100)){
+				$(this).css("color", "red");
+				return;
+			}
+			else{
+				$(this).css("color", "black");
+			}
+	});
+
+	$("#puzzlearea > div").mouseout(function(){
+  		$(this).css("color", "white");
+	});
+
 
 	/**
 	*	I've elected to shuffle by iterating though the puzzle 15 times.
