@@ -27,37 +27,71 @@ $(document).ready(function() {
 			var currPiece = $(this);
 			var currPieceNumber = ($("#puzzlearea > div").index(this)) + 1;
 			var currPiecePos = currPiece.position();
-
 			/**
 			*	this is the logic for piece movement. 
 			*	Javascript has no logical XOR, so I have to do this garbage to make diagonal movement illegal.
 			**/
-			if((Math.abs(currPiecePos.left - piece16left) == 100) && (Math.abs(currPiecePos.top - piece16top) != 100)){
+			//blank square is to the right of target piece
+			if(((currPiecePos.left - piece16left) == -100) && ((currPiecePos.top - piece16top) == 0)){
 				swapWith16($(this));
 				return;
 			}
-			else if ((Math.abs(currPiecePos.top - piece16top) == 100) && (Math.abs(currPiecePos.left - piece16left) != 100)){
+			//blank square is below target piece
+			if (((currPiecePos.top - piece16top) == -100) && ((currPiecePos.left - piece16left) == 0)){
+				swapWith16($(this));
+				return;
+			}
+			//blank square is to the left of target piece
+			if(((currPiecePos.left - piece16left) == 100) && ((currPiecePos.top - piece16top) == 0)){
+				swapWith16($(this));
+				return;
+			}
+			//blank square is above target piece
+			if (((currPiecePos.top - piece16top) == 100) && ((currPiecePos.left - piece16left) == 0)){
 				swapWith16($(this));
 			}
 		});
 
 	$("#puzzlearea > div").mouseover(function(){
 		var currPiecePos = $(this).position();
-  		if((Math.abs(currPiecePos.left - piece16left) == 100) && (Math.abs(currPiecePos.top - piece16top) != 100)){
-				$(this).css("color", "red");
-				return;
-			}
-			else if ((Math.abs(currPiecePos.top - piece16top) == 100) && (Math.abs(currPiecePos.left - piece16left) != 100)){
-				$(this).css("color", "red");
-				return;
-			}
-			else{
-				$(this).css("color", "black");
-			}
+
+		//blank square is to the right of target piece
+		if(((currPiecePos.left - piece16left) == -100) && ((currPiecePos.top - piece16top) == 0)){
+			$(this).css("color", "red");
+			$(this).css("border-color", "red");
+			return;
+		}
+		//blank square is below target piece
+		if (((currPiecePos.top - piece16top) == -100) && ((currPiecePos.left - piece16left) == 0)){
+			$(this).css("color", "red");
+			$(this).css("border-color", "red");
+			return;
+		}
+		//blank square is to the left of target piece
+		if(((currPiecePos.left - piece16left) == 100) && ((currPiecePos.top - piece16top) == 0)){
+			$(this).css("color", "red");
+			$(this).css("border-color", "red");
+			return;
+		}
+		//blank square is above target piece
+		if (((currPiecePos.top - piece16top) == 100) && ((currPiecePos.left - piece16left) == 0)){
+			$(this).css("color", "red");
+			$(this).css("border-color", "red");
+			return;
+		}
+		//if move is not in at most one of four valid cases, then make it turn black.
+		else{
+			$(this).css("color", "black");
+		}
 	});
 
+
+	/**
+	*	This function takes care of resetting the text color on mouseout.
+	**/
 	$("#puzzlearea > div").mouseout(function(){
   		$(this).css("color", "white");
+  		$(this).css("border-color", "black");
 	});
 
 
